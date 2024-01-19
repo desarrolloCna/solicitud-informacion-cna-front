@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Generar Solicitud</title>
+    <link rel="icon" href="../assets/logo.jpeg" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <!-- Navegacion -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <!--form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="button">Buscar Informacion</button>
+          </form-->
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="Solicitud.html">Salir</a>
+                </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Consejo Nacional de Adopciones (CNA)</a>
+          </li>
+      
+          <!-- Dropdown -->
+          <!--li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Mas informacion
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Sobre Nosotros</a>
+
+            </div>
+          </li-->
+        </ul>
+      </nav>
+
+      <div class="text-center my-4" style="display: flex; align-items: center; justify-content: center;">
+        <h4 style="margin-right: 20px;">Solicitud de Información Pública</h4>
+        <img src="../assets/cna123.jpeg.jpeg" alt="Logo" width="60" height="60">
+    </div>
+    
+    
+    
+    
+    <!-- Formulario -->
+    <div class="container">
+        <div class="jumbotron narrow-jumbotron"> <!-- Añade la clase personalizada narrow-jumbotron -->
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <!-- Nombre Completo y Sexo -->
+                        <div class="form-row">
+                          <div class="form-group col">
+                            <label for="nombreCompleto">Nombre Completo<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="nombreCompleto" id="nombreCompleto">
+                          </div>
+                          <div class="form-group col">
+                            <label for="sexo">Sexo</label>
+                            <select class="form-control" name="sexo" id="sexo">
+                              <option value="hombre">Hombre</option>
+                              <option value="mujer">Mujer</option>
+                            </select>
+                          </div>
+                        </div>
+              
+                        <!-- Tipo de Documento y Número de Documento -->
+                        <div class="form-row">
+                            <!-- Tipo de Documento (Dropdown) -->
+                        <div class="form-group col">
+                            <label for="tipoDocumento">Documento de Identificación <span class="required">*</span></label>
+                            <select class="form-control" name="tipoDocumento" id="tipoDocumento" onchange="ValidarTipoDocumento()">
+                                <option value="dpi">DPI</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <option value="menorEdad">Menor de Edad</option>
+                            </select>
+                        </div>
+              
+                        <div id="numeroDocumentoDiv" class="form-group col">
+                          <label for="numeroDocumento">Número de Documento<span class="required">*</span></label>
+                          <input type="text" class="form-control" name="numeroDocumento" id="numeroDocumento" required>
+                        </div>
+                      </div>
+              
+                        <!-- Teléfono -->
+                        <div class="form-row">
+                          <div class="form-group col">
+                            <label for="telefono">Teléfono<span class="required">*</span></label>
+                            <input type="number" class="form-control" name="telefono" id="telefono">
+                          </div>
+
+                          <div class="form-group col">
+                            <label for="correo">Correo Electrónico<span class="required">*</span></label>
+                            <input type="text" class="form-control" name="correo" id="correo" >
+                            <span id="formatoCorreo" class="required" style="display: none;"> <strong>Formato de correo invalido</strong></span>
+                          </div>
+                        </div>
+
+                         <!-- Correo -->
+                        <div class="form-row" hidden>
+                          <div class="form-group col">
+                            <label for="correo">Correo</label>
+                            <input type="text" class="form-control" name="correo" id="correo">
+                          </div>
+                        </div>
+              
+                        <!-- Etnia y Pertenencia Social -->
+                        <div class="form-row">
+                            <!-- Etnia (Dropdown) -->
+                            <div class="form-group col">
+                            <label for="etnia">Etnia</label>
+                            <select class="form-control" name="etnia" id="etnia">
+                                <option value="maya">Maya</option>
+                                <option value="xinka">Xinka</option>
+                                <option value="garifuna">Garífuna</option>
+                                <option value="ladino">Ladino</option>
+                            </select>
+                            </div>
+
+                            <!-- Pertenencia Social (Dropdown) -->
+                            <div class="form-group col">
+                            <label for="pertenenciaSocial">Pertenencia Sociolingüística</label>
+                            <select class="form-control" name="pertenenciaSocial" id="pertenenciaSocial">
+                                <option value="Español">Español</option>
+                                <option value="Achi">Achi</option>
+                                <option value="Akateko">Akateko</option>
+                                <option value="Awakateko">Awakateko</option>
+                                <option value="Ch'orli'">Ch'orli'</option>
+                                <option value="Chuj">Chuj</option>
+                                <option value="Chaichiteko">Chalchiteko</option>
+                                <option value="Itza">Itza'</option>
+                                <option value="Ixil">Ixil</option>
+                                <option value="Jakalteko">Jakalteko</option>
+                                <option value="Q'anjobál">Q'anjoba'l</option>
+                                <option value="Kaqchikel">Kaqchikel</option>
+                                <option value="K'iche'">k'iche'</option>
+                                <option value="Mam">Mam</option>
+                                <option value="Mopan">Mopan</option>
+                                <option value="Poqoman">Poqomam</option>
+                                <option value="Poqomchi'">Poqomchi'</option>
+                                <option value="Q'eqchi">Q'eqchi</option>
+                                <option value="Sakapulteko">Sakapulteco</option>
+                                <option value="Sipakapense">Sipakapense</option>
+                                <option value="Tektiteko">Tektiteko</option>
+                                <option value="Tz'utujil">Tz'utujil</option>
+                                <option value="Uspanteko">Uspanteko</option>
+                               
+                               <!-- Agrega las demás opciones según tus necesidades -->
+                            </select>
+                            </div>
+
+                        </div>
+              
+                        <!-- Descripción de la Solicitud -->
+                        <div class="form-group">
+                          <label for="descripcionSolicitud">Descripción de la solicitud clara y precisa <span class="required">*</span></label>
+                          <textarea class="form-control" name="descripcionSolicitud" id="descripcionSolicitud" rows="3" maxlength="800"></textarea>
+                        </div>
+              
+                        <!-- Tipo de Notificación (Dropdown) -->
+                        <div class="form-group">
+                            <label for="tipoNotificacion">Tipo de Notificación <span class="required">*</span></label>
+                            <select class="form-control" name="tipoNotificacion" id="tipoNotificacion" onchange="ValidarTipoNotificacion();">
+                            <option value="correoElectronico">Correo Electrónico</option>
+                            <option value="oficinaFisica">Oficina Física</option>
+                            </select>
+                        </div>
+                        
+              
+                      </form>
+
+                      <div class="text-center">
+                        <input name="" id="" class="btn btn-primary" type="button" value="Enviar" onclick="GuardarSolicitud()">
+                      </div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de datos guardados -->
+    <div id="confirmacionGuardadoModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="confirmacionGuardadoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-center text-white">
+                    <h5 class="modal-title" id="confirmacionGuardadoModalLabel">Datos Enviados Exitosamente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¡La solicitud se ha enviado exitosamente, por favor revise su correo electrónico!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal de error por campos vacíos -->
+        <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title text-center" id="errorModalLabel">Error</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="font-weight-bold">Por favor, completa el siguiente campo obligatorio:</p>
+                        <p id="campoVacio" class="text-danger"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- script -->
+    <script src="./solciitud.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

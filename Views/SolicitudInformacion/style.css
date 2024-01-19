@@ -1,0 +1,167 @@
+/* Estilos generales */
+body {
+    background: url('') center center no-repeat;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    margin: 0;
+    background-color: #c0ddef; /* Fallback color si la imagen no carga o no cubre todo el fondo */
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Estilos para campos obligatorios y mensajes de ayuda */
+  span.required,
+  span.required-help {
+    color: red;
+    font-weight: bold;
+  }
+  
+  span.required-help {
+    font-size: 0.7em;
+    margin-left: 5px;
+  }
+  
+  /* Estilos de navegación */
+  .navbar {
+    background-color: #6C757D;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    background-color: #ffffff;
+  }
+  
+  /* Estilos para el título principal */
+  h4 {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: transparent;
+    background: linear-gradient(45deg, #404041, #33aaff);
+    background-clip: text; /* Utilizando background-clip */
+}
+
+h4::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 2px;
+    background: linear-gradient(45deg, #404041, #33aaff);
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+h4::after {
+  content: '';
+  display: block;
+  width: 250px;
+  height: 2px;
+  background: linear-gradient(45deg, #404041, #33aaff); /* Mismo degradado que en el texto */
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  
+  /* Estilos para el formulario */
+  .form-control {
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+  }
+  
+  .btn-primary {
+    background-color: #007BFF;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el jumbotron */
+  .jumbotron {
+    background: url('') center center no-repeat, #f8f9fa;
+    border: 1px solid #d6d8db;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Estilos para el modal de confirmación y error */
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    color: #fff;
+  }
+  
+  #errorModal .modal-content {
+    background-color: #f8d7da;
+  }
+  
+  #errorModal .modal-header {
+    background-color: #dc3545;
+  }
+  
+  #errorModal .modal-body {
+    padding: 20px;
+  }
+  
+  #errorModal .modal-footer {
+    border-top: 1px solid #dc3545;
+    padding: 15px 20px;
+  }
+  
+  #errorModal .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+  
+  #errorModal .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Estilo para la barra de navegación */
+.navbar.navbar-expand-sm {
+    background-color: #0f3c6c !important; /* Azul brillante para la barra de navegación */
+  }
+  
+  /* Estilo para los enlaces en la barra de navegación */
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important; /* Texto blanco en los enlaces */
+  }
+  
+  /* Estilo para el botón del formulario de búsqueda (si lo usas) */
+  .form-inline .form-control {
+    background-color: #ffffff !important; /* Fondo blanco para el campo de búsqueda */
+    color: #007BFF !important; /* Texto azul brillante para el campo de búsqueda */
+  }
+  
+  .form-inline .btn-success {
+    background-color: #007BFF !important; /* Botón de búsqueda en azul brillante */
+    color: #ffffff !important; /* Texto blanco en el botón de búsqueda */
+  }
+  
+  /* Si decides agregar el dropdown, puedes agregar estilos aquí */
+  /* .navbar-dark .navbar-nav .nav-item.dropdown:hover .nav-link {
+    color: #ffffff !important; // Cambia el color al pasar el mouse sobre el enlace del dropdown
+  }
+  .navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu {
+    background-color: #007BFF !important; // Fondo azul para el dropdown
+  } */
+  
