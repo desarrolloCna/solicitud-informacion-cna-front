@@ -182,8 +182,8 @@ h4::after {
   
   #loadingIndicator img {
     width: 80%; /* Ajusta el tamaño de la imagen según tu preferencia */
-    max-width: 400px; /* Establece un máximo para la anchura de la imagen */
-    max-height: 100%;
+    max-width: 200px; /* Establece un máximo para la anchura de la imagen */
+    max-height: 50%;
     display: block;
     margin: auto; /* Centra horizontalmente dentro del contenedor flex */
     margin-top: 15%;
